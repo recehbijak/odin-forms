@@ -13,35 +13,36 @@
             <div id="event-pass" class="event-pass">
                 <fieldset id="paddock-suites">
                     <legend>Paddock Suites</legend>
-                    <input type="radio" id="team-suites" name="suite-options">
+                    <input type="radio" id="team-suites" name="suite-options" value="team">
                     <label for="team-suites">Team Suites</label>
                     <div class="team-suites-wrapper">
-                        <fieldset id="team-selections">
-                            <input type="radio" id="team-1" name="suite-choice" value="1" disabled>
+                        <fieldset id="team-suites-selections">
+                            <input type="radio" class="radio-team" id="team-1" name="suite-choice" value="1" disabled>
                             <label for="team-1">RBR</label>
-                            <input type="radio" id="team-2" name="suite-choice" value="2" disabled=>
+                            <input type="radio" class="radio-team" id="team-2" name="suite-choice" value="2" disabled>
                             <label for="team-2">MER</label>
-                            <input type="radio" id="team-3" name="suite-choice" value="3" disabled>
+                            <input type="radio" class="radio-team" id="team-3" name="suite-choice" value="3" disabled>
                             <label for="team-3">FER</label>
-                            <input type="radio" id="team-4" name="suite-choice" value="4" disabled>
+                            <input type="radio" class="radio-team" id="team-4" name="suite-choice" value="4" disabled>
                             <label for="team-4">AMR</label>
-                            <input type="radio" id="team-5" name="suite-choice" value="5" disabled>
+                            <input type="radio" class="radio-team" id="team-5" name="suite-choice" value="5" disabled>
                             <label for="team-5">MCL</label>
-                            <input type="radio" id="team-6" name="suite-choice" value="6" disabled>
+                            <input type="radio" class="radio-team" id="team-6" name="suite-choice" value="6" disabled>
                             <label for="team-6">ALP</label>
-                            <input type="radio" id="team-7" name="suite-choice" value="7" disabled>
+                            <input type="radio" class="radio-team" id="team-7" name="suite-choice" value="7" disabled>
                             <label for="team-7">HAA</label>
-                            <input type="radio" id="team-8" name="suite-choice" value="8" disabled>
+                            <input type="radio" class="radio-team" id="team-8" name="suite-choice" value="8" disabled>
                             <label for="team-8">WIL</label>
-                            <input type="radio" id="team-9" name="suite-choice" value="9" disabled>
+                            <input type="radio" class="radio-team" id="team-9" name="suite-choice" value="9" disabled>
                             <label for="team-9">SAU</label>
                         </fieldset>
                     </div>
-                    <input type="radio" name="suite-options" id="paddock-club">
+                    <input type="radio" name="suite-options" id="paddock-club" value="paddock">
                     <label for="paddock-club">Paddock Club</label>
-                    <select name="suite-choice" id="paddock-suites" disabled>
-                        <option value="11" id="suite-1"></option>
-                        <option value="12" id="suite-2"></option>
+                    <select name="suite-choice" id="club-suites" disabled>
+                        <option value="0" id="suite-0" selected="selected">Select</option>
+                        <option value="11" id="suite-1">Skysuite</option>
+                        <option value="12" id="suite-2">Krisflyer</option>
                         <option value="13" id="suite-3"></option>
                         <option value="14" id="suite-4"></option>
                         <option value="15" id="suite-5"></option>
@@ -81,5 +82,6 @@
             </div>
         </form>
     </div>
+    <script src="scripts.js" defer></script>
 </body>
 </html>
