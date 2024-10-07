@@ -40,7 +40,7 @@
                     <input type="radio" name="suite-options" id="paddock-club" value="paddock">
                     <label for="paddock-club">Paddock Club</label>
                     <select name="suite-choice" id="club-suites" disabled>
-                        <option value="0" id="suite-0" selected="selected">Select</option>
+                        <option value="10" id="suite-0" selected="selected">Select</option>
                         <option value="11" id="suite-1">Skysuite</option>
                         <option value="12" id="suite-2">Krisflyer</option>
                         <option value="13" id="suite-3"></option>
@@ -64,11 +64,12 @@
                     <label for="day-pass-4">All-days</label>
                 </fieldset>
                 <div id="order-placement" class="order-placement">
-                <h3>Your-order</h3>
+                <h3>Your Order</h3>
                 <div class="quantity-wrapper">
-                    <p>#paddock-suites + #day-pass-$ + Pass</p>
+                    <p id="order-invoice">#paddock-suites + #day-pass-$ + Pass</p>
                     <label for="pass-quantity">Quantity</label>
-                    <select name="pass-quanitty" id="pass-quantity">
+                    <select name="order-quantity" id="order-quantity">
+                        <option value="0" selected>Select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -77,7 +78,7 @@
                 </div>
                 <div class="total-wrapper">
                     <p>Total</p>
-                    <p>$ 0.00</p>
+                    <p>$ <span id="order-sum">0</span>.00</p>
                 </div>
             </div>
         </form>
