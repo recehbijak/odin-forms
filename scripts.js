@@ -56,10 +56,10 @@ let selectedValue = {
 }
 let dayValue = {
     day: [ "",
-        "Day 1",
-        "Day 2",
-        "Day 3",
-        "All Days"
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Three-day"
     ],
     price: [0, 0, 300, 500, 2000]
     
@@ -85,8 +85,6 @@ teamsRadio.forEach(tSuite => {
     tSuite.addEventListener("change", event => {
         invoiceValue.splice(0, 1, selectedValue.price[event.target.value]);
         selectedSuite = selectedValue.suite[event.target.value];
-        invoiceTotal = invoiceReduce(invoiceValue)
-        orderSum.innerText = invoiceTotal;
         console.log(invoiceValue);
         updateOrderInvoice()
     })
@@ -95,8 +93,6 @@ teamsRadio.forEach(tSuite => {
 clubSelect.addEventListener("change", event => {
     invoiceValue.splice(0, 1, selectedValue.price[clubSelect.value]);
     selectedSuite = selectedValue.suite[clubSelect.value];
-    invoiceTotal = invoiceReduce(invoiceValue);
-    orderSum.innerText = invoiceTotal;
     console.log(invoiceValue);
     updateOrderInvoice()
 }

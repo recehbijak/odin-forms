@@ -10,13 +10,16 @@
 <body>
     <div id="form-wrapper">
         <form action="" id="ticket-form">
+            <div id="identity-wrapper">
+
+            </div>
             <div id="event-pass" class="event-pass">
-                <fieldset id="paddock-suites">
+                <fieldset id="paddock-suites" aria-required="true">
                     <legend>Paddock Suites</legend>
                     <input type="radio" id="team-suites" name="suite-options" value="team">
                     <label for="team-suites">Team Suites</label>
                     <div class="team-suites-wrapper">
-                        <fieldset id="team-suites-selections">
+                        <fieldset id="team-suites-selections" aria-required="true">
                             <input type="radio" class="radio-team" id="team-1" name="suite-choice" value="1" disabled>
                             <label for="team-1">RBR</label>
                             <input type="radio" class="radio-team" id="team-2" name="suite-choice" value="2" disabled>
@@ -39,7 +42,7 @@
                     </div>
                     <input type="radio" name="suite-options" id="paddock-club" value="paddock">
                     <label for="paddock-club">Paddock Club</label>
-                    <select name="suite-choice" id="club-suites" disabled>
+                    <select name="suite-choice" id="club-suites" aria-required="true" disabled>
                         <option value="10" id="suite-0" selected="selected">Select</option>
                         <option value="11" id="suite-1">Skysuite</option>
                         <option value="12" id="suite-2">Krisflyer</option>
@@ -50,24 +53,23 @@
                         <option value="17" id="suite-7"></option>
                         <option value="18" id="suite-8"></option>
                     </select>
-
                 </fieldset>
                 <fieldset id="choose-passes">
                     <legend>Choose Passes</legend>
                     <input type="radio" name="day-pass" value="1" id="day-pass-1">
-                    <label for="day-pass-1">Day 1</label>
+                    <label for="day-pass-1">Friday</label>
                     <input type="radio" name="day-pass" value="2" id="day-pass-2">
-                    <label for="day-pass-2">Day 2</label>
+                    <label for="day-pass-2">Saturday</label>
                     <input type="radio" name="day-pass" value="3" id="day-pass-3">
-                    <label for="day-pass-3">Day 3</label>
+                    <label for="day-pass-3">Sunday</label>
                     <input type="radio" name="day-pass" value="4" id="day-pass-4">
-                    <label for="day-pass-4">All-days</label>
+                    <label for="day-pass-4">Three-day</label>
                 </fieldset>
                 <div id="order-placement" class="order-placement">
                 <h3>Your Order</h3>
                 <div class="quantity-wrapper">
                     <p id="order-invoice"></p>
-                    <label for="pass-quantity">Quantity</label>
+                    <label for="pass-quantity">Quantity (Max. 4)</label>
                     <select name="order-quantity" id="order-quantity">
                         <option value="0" selected>Select</option>
                         <option value="1">1</option>
