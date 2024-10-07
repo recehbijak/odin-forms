@@ -8,6 +8,78 @@
     </style>
 </head>
 <body>
-    
+    <div id="form-wrapper">
+        <form action="" id="ticket-form">
+            <div id="event-pass" class="event-pass">
+                <fieldset id="paddock-suites">
+                    <legend>Paddock Suites</legend>
+                    <input type="radio" id="team-suites" name="suite-options">
+                    <label for="team-suites">Team Suites</label>
+                    <div class="team-suites-wrapper">
+                        <fieldset id="team-selections">
+                            <input type="radio" id="team-1" name="suite-choice" value="1" disabled>
+                            <label for="team-1">RBR</label>
+                            <input type="radio" id="team-2" name="suite-choice" value="2" disabled=>
+                            <label for="team-2">MER</label>
+                            <input type="radio" id="team-3" name="suite-choice" value="3" disabled>
+                            <label for="team-3">FER</label>
+                            <input type="radio" id="team-4" name="suite-choice" value="4" disabled>
+                            <label for="team-4">AMR</label>
+                            <input type="radio" id="team-5" name="suite-choice" value="5" disabled>
+                            <label for="team-5">MCL</label>
+                            <input type="radio" id="team-6" name="suite-choice" value="6" disabled>
+                            <label for="team-6">ALP</label>
+                            <input type="radio" id="team-7" name="suite-choice" value="7" disabled>
+                            <label for="team-7">HAA</label>
+                            <input type="radio" id="team-8" name="suite-choice" value="8" disabled>
+                            <label for="team-8">WIL</label>
+                            <input type="radio" id="team-9" name="suite-choice" value="9" disabled>
+                            <label for="team-9">SAU</label>
+                        </fieldset>
+                    </div>
+                    <input type="radio" name="suite-options" id="paddock-club">
+                    <label for="paddock-club">Paddock Club</label>
+                    <select name="suite-choice" id="paddock-suites" disabled>
+                        <option value="11" id="suite-1"></option>
+                        <option value="12" id="suite-2"></option>
+                        <option value="13" id="suite-3"></option>
+                        <option value="14" id="suite-4"></option>
+                        <option value="15" id="suite-5"></option>
+                        <option value="16" id="suite-6"></option>
+                        <option value="17" id="suite-7"></option>
+                        <option value="18" id="suite-8"></option>
+                    </select>
+
+                </fieldset>
+                <fieldset id="choose-passes">
+                    <legend>Choose Passes</legend>
+                    <input type="radio" name="day-pass" value="1" id="day-pass-1">
+                    <label for="day-pass-1">Day 1</label>
+                    <input type="radio" name="day-pass" value="2" id="day-pass-2">
+                    <label for="day-pass-2">Day 2</label>
+                    <input type="radio" name="day-pass" value="3" id="day-pass-3">
+                    <label for="day-pass-3">Day 3</label>
+                    <input type="radio" name="day-pass" value="4" id="day-pass-4">
+                    <label for="day-pass-4">All-days</label>
+                </fieldset>
+                <div id="order-placement" class="order-placement">
+                <h3>Your-order</h3>
+                <div class="quantity-wrapper">
+                    <p>#paddock-suites + #day-pass-$ + Pass</p>
+                    <label for="pass-quantity">Quantity</label>
+                    <select name="pass-quanitty" id="pass-quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="total-wrapper">
+                    <p>Total</p>
+                    <p>$ 0.00</p>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
