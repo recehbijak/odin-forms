@@ -113,8 +113,8 @@ body {
     background-color: var(--vanta-black); 
     color: var(--off-white);
     font-family: var(--dm-sans);
-    overflow: hidden;
-    padding-top: 30px;
+    overflow: auto;
+    padding-top: 10vh;
 }
 
 h1 {
@@ -171,20 +171,20 @@ label[for="paddock-club"] {
 
 .page-content {
     width: 1000px;
-    margin: 120px auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 0 0 50px 0;
     display: flex;
     justify-content: space-between;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     background-color: var(--vanta-black);
     box-shadow: 0 0 20px var(--purple-acc);
     overflow: auto;
-    height: 100vh;
+    height: 90vh;
 }
 
 .page-content::-webkit-scrollbar {
     width: 8px;
-    height: 8px;
     overflow: hidden;
 }
 
@@ -336,7 +336,42 @@ textarea:focus {
 /*Team suites background img */
 
 .team-buttons label[for="team-1"] {
-    background-image: url(https://cdn-6.motorsport.com/images/mgl/Y99JQRbY/s800/red-bull-racing-logo-1.jpg);
+    background-image: url(./img/redbull.jpg);
+}
+
+.team-buttons label[for="team-2"] {
+    background-image: url(./img/mer.jpg);
+    background-position-y: 43%;
+}
+
+.team-buttons label[for="team-3"] {
+    background-image: url(./img/fer.jpg);
+}
+
+.team-buttons label[for="team-4"] {
+    background-image: url(./img/amr.jpg);
+}
+
+.team-buttons label[for="team-5"] {
+    background-image: url(./img/mcl.jpg);
+}
+
+.team-buttons label[for="team-6"] {
+    background-image: url(./img/alp.jpg);
+}
+
+.team-buttons label[for="team-7"] {
+    background-image: url(./img/haa.png);
+}
+
+.team-buttons label[for="team-8"] {
+    background-image: url(./img/wil.jpg);
+}
+
+.team-buttons label[for="team-9"] {
+    background-image: url(./img/sau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*Team suites background img end*/
@@ -345,6 +380,7 @@ textarea:focus {
 .team-buttons input.radio-team:disabled + label {
     border-color: var(--elegant-grey);
     filter: grayscale(1);
+    opacity: 30%;
 }
 
 .team-buttons input.radio-team:enabled + label:hover,
@@ -387,6 +423,32 @@ textarea:focus {
     margin: auto 50px;
     box-sizing: content-box;
     border-right: 1px solid var(--purple-acc);
+}
+
+.day-pass-wrapper label.friday {
+    background-image: linear-gradient(to right, var(--vanta-black) 20%, rgb(3, 3, 3, 50%) 75%, transparent), 
+    url(./img/friday.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 100%;
+}
+
+.day-pass-wrapper label.saturday {
+    background-image: linear-gradient(to right, var(--vanta-black) 20%, rgb(3, 3, 3, 50%) 75%, transparent), 
+    url(./img/saturday.jpeg);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    background-position-x: 100%;
+}
+
+.day-pass-wrapper label.sunday {
+    background-image: linear-gradient(to right, var(--vanta-black) 20%, rgb(3, 3, 3, 50%) 75%, transparent), 
+    url(./img/sunday.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 55%;
 }
 
 textarea {
