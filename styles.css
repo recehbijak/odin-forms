@@ -1,0 +1,256 @@
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+
+
+/* End of CSS Reset */
+
+
+:root {
+    --purple-acc: #38213f;
+    --gold-acc: rgb(201, 168, 85);
+    --off-white: rgb(219, 219, 219);
+    --elegant-grey: rgb(31, 31, 31);
+    --vanta-black: rgb(3, 3, 3);
+}
+
+body {
+    background-color: var(--purple-acc); 
+    color: var(--off-white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--gold-acc);
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+label,
+input[type="radio"] {
+    cursor: pointer;
+}
+
+label[for="team-suites"],
+label[for="paddock-club"] {
+    font-weight: bold;
+}
+
+.page-content {
+    width: 1000px;
+    margin: 120px auto 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    background-color: var(--vanta-black);
+}
+
+.side-image {
+    max-width: 250px;
+    background-color: #200a17;
+    flex-grow: 1;
+}
+
+.form-wrapper {
+    flex-grow: 1;
+    margin: 30px 0;
+}
+
+#ticket-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    gap: 2rem;
+}
+
+.form-content {
+    flex-grow: 1;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.radio-wrapper {
+    padding-left: 25px;
+}
+
+.radio-team {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+#paddock-suites {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.team-suites-wrapper {
+    padding: 0 25px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.club-select {
+    display: inline-block;
+    margin: 0 25px;
+    overflow: auto; 
+    width: 95%;
+    margin-bottom: 2rem;
+}
+
+
+.team-buttons {
+    display: grid;
+    height: 450px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+
+    > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--purple-acc);
+        border-radius: 15px;
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+/*Team suites background img */
+
+.team-buttons label[for="team-1"] {
+    background-image: url(https://cdn-6.motorsport.com/images/mgl/Y99JQRbY/s800/red-bull-racing-logo-1.jpg);
+}
+
+/*Team suites background img end*/
+
+
+.team-buttons input.radio-team:disabled + label {
+    border-color: var(--elegant-grey);
+    filter: grayscale(1);
+}
+
+.team-buttons input.radio-team:enabled + label:hover,
+.day-pass-wrapper label:hover {
+    transform: scale(105%);
+    border-color: var(--gold-acc);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
+}
+
+.team-buttons input.radio-team:checked + label,
+.day-pass-wrapper label:has(> input[type="radio"]:checked) {
+    border-color: var(--gold-acc);
+}
+
+.day-pass-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 25px;
+    flex: 0 1;
+}
+
+.day-pass-wrapper label {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--purple-acc);
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.day-pass-wrapper label input[type="radio"] {
+    margin: auto 50px;
+    box-sizing: content-box;
+    border-right: 1px solid var(--purple-acc);
+}
+
+
+
+
