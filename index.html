@@ -71,20 +71,25 @@
                     </fieldset>
                     <div id="order-placement" class="order-placement form-content">
                     <h2>Your Order</h2>
-                    <div class="quantity-wrapper">
-                        <p id="order-invoice"></p>
-                        <label for="pass-quantity">Quantity (Max. 4)</label>
-                        <select name="order-quantity" id="order-quantity">
-                            <option value="0" selected>Qty</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                    <div class="total-wrapper">
-                        <p>Total</p>
-                        <p>$ <span id="order-sum">0</span>.00</p>
+                    <div class="invoice-wrapper">
+                        <div class="invoice-row">
+                            <p id="order-invoice"></p>
+                            <p>$ <span id="order-no-sum">0</span>.00</p>
+                        </div>
+                        <div class="invoice-row"></div>
+                            <label for="pass-quantity">Quantity (Max. 4)</label>
+                            <select name="order-quantity" id="order-quantity">
+                                <option value="0" selected>Qty</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="invoice-row">
+                            <p>Total</p>
+                            <p>$ <span id="order-sum">0</span>.00</p>
+                        </div>
                     </div>
                 </div>
             </form>

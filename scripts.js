@@ -4,7 +4,8 @@ const clubSelect = document.querySelector("#club-suites");
 const dayPass = document.querySelectorAll("input[name=day-pass]");
 const orderInvoice = document.querySelector("#order-invoice");
 const orderQty = document.querySelector("#order-quantity");
-const orderSum = document.querySelector("#order-sum")
+const orderSum = document.querySelector("#order-sum");
+const orderNoSum = document.querySelector("#order-no-sum");
 
 let invoiceValue = [0, ];
 let invoiceTotal;
@@ -104,9 +105,11 @@ dayPass.forEach(day => {
         invoiceTotal = invoiceReduce(invoiceValue);
         orderSum.innerText = invoiceTotal;
         console.log(invoiceValue);
-        updateOrderInvoice()
+        updateOrderInvoice();
+        updateOrderValue();
     })
 })
+
 
 orderQty.addEventListener("change", event => {
     selectedQty = parseInt(orderQty.value);
@@ -114,7 +117,7 @@ orderQty.addEventListener("change", event => {
     orderSum.innerText = invoiceTotal;
     console.log(invoiceTotal);
     console.log(selectedQty);
-    updateOrderInvoice()
+    updateOrderInvoice();
 }    
 )
 
@@ -124,5 +127,8 @@ function invoiceReduce(arr) {
 
 function updateOrderInvoice() {
     orderInvoice.innerText = selectedSuite + " " + selectedDay + " " + "Pass";
-    
+}
+
+function updateOrderValue() {
+    orderNoSum.innerText = invoiceReduce(invoiceValue);
 }
