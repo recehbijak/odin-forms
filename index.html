@@ -15,7 +15,7 @@
                     <h2>Personal Information</h2>
                 </div>
                 <div id="event-pass" class="event-pass form-content">
-                    <h2>Paddock Pass</h2>
+                    <h2>Paddock Access</h2>
                     <fieldset id="paddock-suites" class="form-content" aria-required="true">
                         <legend><h3>Paddock Suites</h3></legend>
                         <div class="radio-wrapper">
@@ -61,7 +61,7 @@
                         </select>
                     </fieldset>
                     <fieldset id="choose-passes" class="form-content pass-buttons">
-                        <legend><h3>Choose Passes</h3></legend>
+                        <legend><h3>Entry Day</h3></legend>
                         <div class="day-pass-wrapper">
                             <label for="day-pass-1"><input type="radio" name="day-pass" value="1" id="day-pass-1"> Friday</label>
                             <label for="day-pass-2"><input type="radio" name="day-pass" value="2" id="day-pass-2"> Saturday</label>
@@ -70,25 +70,40 @@
                         </div>
                     </fieldset>
                     <div id="order-placement" class="order-placement form-content">
-                    <h2>Your Order</h2>
+                    <h2>Invoice</h2>
                     <div class="invoice-wrapper">
-                        <div class="invoice-row">
-                            <p id="order-invoice"></p>
-                            <p>$ <span id="order-no-sum">0</span>.00</p>
+                        <div class="invoice-receipt">
+                            <div  class="invoice-row">
+                                <p id="order-invoice" class="invoice-highlight"><b>None</b></p>
+                                <p class="invoice-highlight"><b>$ <span id="order-no-sum">0</span>.00</b></p>
+                            </div>
+                            <div  class="invoice-row">
+                                <label for="pass-quantity">Quantity (Max. 4)</label>
+                                <select name="order-quantity" id="order-quantity">
+                                    <option value="0" selected>Qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="invoice-row"></div>
-                            <label for="pass-quantity">Quantity (Max. 4)</label>
-                            <select name="order-quantity" id="order-quantity">
-                                <option value="0" selected>Qty</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
+                        <div class="invoice-row total">
+                            <p class="invoice-highlight"><b>Total</b></p>
+                            <p class="invoice-highlight"><b>$ <span id="order-sum">0</span>.00</b></p>
                         </div>
-                        <div class="invoice-row">
-                            <p>Total</p>
-                            <p>$ <span id="order-sum">0</span>.00</p>
+                    </div>
+                    <div class="form-content">
+                        <label for="tna">
+                            <input type="checkbox" id="tna"> I have read and agreed with terms and conditions and privacy policy.</label>
+                    </div>
+                    <div class="form-content">
+                        <div class="button-wrapper">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <button type="submit">Order</button>
                         </div>
                     </div>
                 </div>

@@ -126,7 +126,7 @@ function invoiceReduce(arr) {
 }
 
 function updateOrderInvoice() {
-    orderInvoice.innerText = selectedSuite + " " + selectedDay + " " + "Pass";
+    orderInvoice.innerHTML = `<b> ${selectedSuite} ${selectedDay} Pass </b>`;
 }
 
 function updateOrderValue() {

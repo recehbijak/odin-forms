@@ -151,7 +151,7 @@ label[for="paddock-club"] {
 }
 
 .side-image {
-    max-width: 250px;
+    min-width: 250px;
     background-color: #200a17;
     flex-grow: 1;
 }
@@ -281,5 +281,59 @@ label[for="paddock-club"] {
 }
 
 
+.invoice-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.invoice-receipt {
+    width: 100%;
+    padding: 1rem;
+}
+
+.invoice-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.invoice-highlight {
+    font-size: 1.2rem;
+}
+
+select#order-quantity {
+    font-size: 0.9em;
+    padding: 0.4em;
+    box-sizing: content-box;
+}
+
+.total {
+    border-top: 1px solid var(--elegant-grey);
+    padding: 1rem;
+}
+
+label[for="tna"] {
+    padding-left: 25px;
+}
 
 
+.button-wrapper {
+    padding: 25px;
+    border-top: 1px solid var(--elegant-grey);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button-wrapper button {
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    background-color: var(--gold-acc);
+    border-radius: 15px;
+}
