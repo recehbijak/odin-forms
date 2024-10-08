@@ -97,7 +97,7 @@ fieldset {
 
 :root {
     --purple-acc: #38213f;
-    --gold-acc: rgb(201, 168, 85);
+    --gold-acc: rgb(240, 193, 75);
     --off-white: rgb(219, 219, 219);
     --elegant-grey: rgb(31, 31, 31);
     --vanta-black: rgb(3, 3, 3);
@@ -181,6 +181,52 @@ label[for="paddock-club"] {
     flex-grow: 1;
 }
 
+.identity-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.identity-row.double {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.identity-row label {
+    font-weight: bold;
+}
+
+.identity-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.identity-input-wrapper.first{
+    flex-basis: 30%;
+}
+
+.identity-input-wrapper.last {
+    flex-basis: 70%;
+}
+
+.input-text {
+    background-color: transparent;
+    border: 1px solid var(--purple-acc);
+    padding: 1em;
+    font-size: 1.2rem;
+    height: 3em;
+    color: var(--off-white);
+    border-radius: 15px;
+    outline: none;
+}
+
+.input-text:focus,
+textarea:focus {
+    border-color: var(--gold-acc);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
+}
+
 .form-wrapper {
     flex-grow: 1;
     margin: 30px 0;
@@ -188,6 +234,11 @@ label[for="paddock-club"] {
 
 .intro-wrapper {
     padding: 0 30px;
+    margin-bottom: 3rem;
+}
+
+.intro-wrapper h1 {
+    margin-bottom: 1rem;
 }
 
 #ticket-form {
@@ -202,7 +253,7 @@ label[for="paddock-club"] {
 .form-content {
     flex-grow: 1;
     width: 100%;
-    margin: 2rem 0;
+    margin-bottom: 2rem;;
 }
 
 .radio-wrapper {
@@ -315,6 +366,7 @@ textarea {
     display: block;
     width: 100%;
     border-radius: 15px;
+    padding: 15px;
 }
 
 .textarea-wrapper {
