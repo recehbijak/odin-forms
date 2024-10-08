@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @font-face {
     font-family: "f1-bold";
     src: url(Formula1-Bold.otf);
@@ -12,6 +13,7 @@
     font-family: "f1-wide";
     src: url(Formula1-Wide.otf);
 }
+
 
 /* CSS Reset */
 
@@ -104,12 +106,15 @@ fieldset {
     --f1-bold: "f1-bold", Verdana, sans-serif;
     --f1-regular: "f1-regular", Verdana, sans-serif;
     --f1-wide: "f1-wide", Verdana, sans-serif;
+    --dm-sans: "Titillium Web", sans-serif;
 }
 
 body {
     background-color: var(--vanta-black); 
     color: var(--off-white);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--dm-sans);
+    overflow: hidden;
+    padding-top: 30px;
 }
 
 h1 {
@@ -166,13 +171,29 @@ label[for="paddock-club"] {
 
 .page-content {
     width: 1000px;
-    margin: 120px auto;
-    padding: 0;
+    margin: 120px auto 0 auto;
+    padding: 0 0 50px 0;
     display: flex;
     justify-content: space-between;
     border-radius: 25px;
     background-color: var(--vanta-black);
     box-shadow: 0 0 20px var(--purple-acc);
+    overflow: auto;
+    height: 100vh;
+}
+
+.page-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.page-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+    background-color: var(--purple-acc);
 }
 
 .side-image {
@@ -181,10 +202,15 @@ label[for="paddock-club"] {
     flex-grow: 1;
 }
 
+#identity-wrapper h2 {
+    margin-bottom: 3rem;
+}
+
 .identity-row {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 25px;
 }
 
 .identity-row.double {
@@ -285,7 +311,7 @@ textarea:focus {
     margin: 0 25px;
     overflow: auto; 
     width: 95%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -345,6 +371,7 @@ textarea:focus {
     gap: 0.5rem;
     padding: 0 25px;
     flex: 0 1;
+    margin-bottom: 2rem;
 }
 
 .day-pass-wrapper label {
@@ -367,11 +394,18 @@ textarea {
     width: 100%;
     border-radius: 15px;
     padding: 15px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: var(--gold-acc);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
 }
 
 .textarea-wrapper {
     padding: 0 25px;
     margin-top: 0.5rem;
+    margin-bottom: 3rem;
 }
 
 .invoice-wrapper {
