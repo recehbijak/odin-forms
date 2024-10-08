@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "f1-bold";
+    src: url(Formula1-Bold.otf);
+}
+
+@font-face {
+    font-family: "f1-regular";
+    src: url(Formula1-Regular.otf);
+}
+
+@font-face {
+    font-family: "f1-wide";
+    src: url(Formula1-Wide.otf);
+}
+
 /* CSS Reset */
 
 /* Box sizing rules */
@@ -86,12 +101,19 @@ fieldset {
     --off-white: rgb(219, 219, 219);
     --elegant-grey: rgb(31, 31, 31);
     --vanta-black: rgb(3, 3, 3);
+    --f1-bold: "f1-bold", Verdana, sans-serif;
+    --f1-regular: "f1-regular", Verdana, sans-serif;
+    --f1-wide: "f1-wide", Verdana, sans-serif;
 }
 
 body {
     background-color: var(--vanta-black); 
     color: var(--off-white);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: var(--f1-bold);
 }
 
 h2 {
@@ -139,6 +161,7 @@ label[for="paddock-club"] {
     font-weight: bold;
 }
 
+
 .page-content {
     width: 1000px;
     margin: 120px auto;
@@ -159,6 +182,10 @@ label[for="paddock-club"] {
 .form-wrapper {
     flex-grow: 1;
     margin: 30px 0;
+}
+
+.intro-wrapper {
+    padding: 0 30px;
 }
 
 #ticket-form {
