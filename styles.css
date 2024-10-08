@@ -89,7 +89,7 @@ fieldset {
 }
 
 body {
-    background-color: var(--purple-acc); 
+    background-color: var(--vanta-black); 
     color: var(--off-white);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -101,6 +101,32 @@ h2 {
 
 h3 {
     margin-bottom: 1rem;
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid var(--elegant-grey);
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    outline: none;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-appearance: none;
+}
+
+select:focus {
+    border: 2px solid var(--gold-acc);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
 }
 
 label,
@@ -115,12 +141,13 @@ label[for="paddock-club"] {
 
 .page-content {
     width: 1000px;
-    margin: 120px auto 0 auto;
+    margin: 120px auto;
     padding: 0;
     display: flex;
     justify-content: space-between;
     border-radius: 25px;
     background-color: var(--vanta-black);
+    box-shadow: 0 0 20px var(--purple-acc);
 }
 
 .side-image {
@@ -225,6 +252,8 @@ label[for="paddock-club"] {
 .day-pass-wrapper label:has(> input[type="radio"]:checked) {
     border-color: var(--gold-acc);
 }
+
+
 
 .day-pass-wrapper {
     display: flex;
