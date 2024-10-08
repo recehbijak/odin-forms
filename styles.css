@@ -245,6 +245,7 @@ label[for="paddock-club"] {
     color: var(--off-white);
     border-radius: 15px;
     outline: none;
+    transition: all, 0.2s, 0.2s;
 }
 
 .input-text:focus,
@@ -330,6 +331,7 @@ textarea:focus {
         border-radius: 15px;
         background-size: 100%;
         background-position: center;
+        transition: all, 0.5s, 0.5s;
     }
 }
 
@@ -417,6 +419,7 @@ textarea:focus {
     height: 100px;
     width: 100%;
     border-radius: 15px;
+    transition: all, 0.5s, 0.5s;
 }
 
 .day-pass-wrapper label input[type="radio"] {
