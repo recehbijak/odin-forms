@@ -442,7 +442,9 @@ textarea:focus {
 .team-buttons input.radio-team:checked + label,
 .day-pass-wrapper label:has(> input[type="radio"]:checked) {
     border-color: var(--gold-acc);
+    border-width: 3px;
     color: var(--gold-acc);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
 }
 
 
