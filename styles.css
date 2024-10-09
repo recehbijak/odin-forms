@@ -100,7 +100,7 @@ fieldset {
 :root {
     --purple-acc: #38213f;
     --gold-acc: #917a48;
-    --off-white: rgb(219, 219, 219);
+    --off-white: rgb(238, 238, 238);
     --elegant-grey: rgb(31, 31, 31);
     --vanta-black: rgb(3, 3, 3);
     --f1-bold: "f1-bold", Verdana, sans-serif;
@@ -272,6 +272,12 @@ textarea:focus {
 .form-wrapper {
     flex-grow: 1;
     margin: 30px 0;
+}
+
+.header-img {
+    width: 75%;
+    height: auto;
+    margin: 0.5rem auto;
 }
 
 .intro-wrapper {
@@ -556,4 +562,13 @@ label[for="tna"] {
     background-color: var(--gold-acc);
     border-radius: 15px;
     font-family: var(--f1-regular);
+}
+
+.button-wrapper button:hover {
+    transform: scale(105%);
+    box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
+}
+
+.button-wrapper button:active {
+    transform: scale(0.9);
 }
