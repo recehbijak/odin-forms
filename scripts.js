@@ -6,6 +6,8 @@ const orderInvoice = document.querySelector("#order-invoice");
 const orderQty = document.querySelector("#order-quantity");
 const orderSum = document.querySelector("#order-sum");
 const orderNoSum = document.querySelector("#order-no-sum");
+const inputAge = document.querySelector("#input-age");
+const inputAgeWrap = document.querySelector("#input-age-wrapper");
 
 let invoiceValue = [0, ];
 let invoiceTotal;

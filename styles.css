@@ -251,6 +251,15 @@ label[for="paddock-club"] {
     flex-basis: 70%;
 }
 
+.validation-message {
+    color: rgb(68, 68, 68);
+    padding-left: 15px;
+}
+
+#input-age:invalid + .validation-message {
+    color: rgb(145, 0, 0);
+}
+
 .input-text {
     background-color: transparent;
     border: 1px solid var(--purple-acc);
@@ -267,6 +276,14 @@ label[for="paddock-club"] {
 textarea:focus {
     border-color: var(--gold-acc);
     box-shadow: 0 0 20px rgb(201, 168, 85, 40%);
+}
+
+.input-text:invalid {
+    border: 1px solid rgb(145, 0, 0);
+}
+
+.input-text:invalid:focus {
+    box-shadow: 0 0 20px rgb(145, 0, 0, 40%);
 }
 
 .form-wrapper {
