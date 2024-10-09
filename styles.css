@@ -99,7 +99,7 @@ fieldset {
 
 :root {
     --purple-acc: #38213f;
-    --gold-acc: rgb(240, 193, 75);
+    --gold-acc: #917a48;
     --off-white: rgb(219, 219, 219);
     --elegant-grey: rgb(31, 31, 31);
     --vanta-black: rgb(3, 3, 3);
@@ -110,7 +110,8 @@ fieldset {
 }
 
 body {
-    background-color: var(--vanta-black); 
+    background-image: linear-gradient(to top, var(--vanta-black) 30%,  rgba(43, 25, 49, 0.75) 80%, rgba(76, 36, 88, 0.5) 100%),
+     url(./img/bg.png);
     color: var(--off-white);
     font-family: var(--dm-sans);
     overflow: auto;
@@ -178,7 +179,7 @@ label[for="paddock-club"] {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     background-color: var(--vanta-black);
-    box-shadow: 0 0 20px var(--purple-acc);
+    box-shadow: 0 0 20px rgba(76, 36, 88, 0.5);
     overflow: auto;
     height: 90vh;
 }
@@ -197,9 +198,23 @@ label[for="paddock-club"] {
 }
 
 .side-image {
-    min-width: 250px;
-    background-color: #200a17;
+    min-width: 200px;
+    height: 100vh;
+    background-image: linear-gradient(to top, var(--vanta-black) 30%, rgba(135, 30, 167, 0.5) 100%),
+    url(./img/sdimg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
     flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: ;
+}
+
+.side-image img {
+    width: auto;
+    height: 100%;
+    margin: 2.5rem 2rem;
 }
 
 #identity-wrapper h2 {
